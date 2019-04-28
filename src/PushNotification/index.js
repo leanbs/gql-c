@@ -17,22 +17,22 @@ class PushNotification extends Component {
     this.setState({ label: '' });
   }
 
+  handleChange = escape => {
+    this.setState({ label: e.target.value })
+  }
+
   render() {
     return (
       <Fragment>
         <input
           value={this.state.label}
-          onChange={e => this.setState({ label: e.target.value })}
+          onChange={this.handleChange}
           type="text"
           placeholder="A label"
         />
         <button onClick={this.handlePushNotif}>Submit</button>
       </Fragment>
     )
-  }
-
-  _pushNotification = async () => {
-    
   }
 }
 
